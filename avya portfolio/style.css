@@ -41,43 +41,72 @@ display:none;
 }
 	
 }
-.image{
-	width:250px;
-	height:250px;
-	border-radius:50%;
-	border:3px solid #82B2C0;
-	margin-left:250px;
-	margin-top:20px;
-
-}
-.sec{
-border:3px solid #82B2C0;
-width:800px; 
-height:450px;
-margin-top:70px;
-background-color:#E7F1F9;
-
-}
-.name1{
-border:2px solid #82B2C0;
-margin:8px;
-padding:9px;
-height:130px;
-}
-.hello{
+.about-section {
 display:flex;
 justify-content:center;
 
+
+
 }
-.name2{
-	text-align:center;
+
+.about-container{
+max-width:800px; 
+margin-top:70px;
+padding:20px 20px;
+background-color:#E7F1F9;
+border-radius:20px;
+box-shadow:10px 10px 10px lightblue;
+margin:20px;
+opacity:0.3;
+trasition: opacity 1s ease-in-out;
 }
-.btn{
-padding:4px;
+.about-container:hover{
+	opacity:1;
+}
+
+.img-div{
+display:flex;
+justify-content:center;
+}
+
+.image{
+	max-width:250px;
+	border-radius:50%;
+}
+
+.about{
+padding:20px;
+text-align:center;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.about-name{
+font-size:26px;
+}
+.profile-name{
+color:gray;
+}
+
+
+.namee{
+color:#82B2C0;
+}
+
+.profile-name{
+margin-top:5px;
+} 
+.about-me{
+	font-size:17px;
+	text-align:justify;
+}
+.resume-btn{
+padding:8px;
 background-color:#82B2C0;
 color:#E7F1F9;
 margin-top:4px;
-margin-left:600px;
 border-radius:50px;
-
-}
+border:none;
+font-size:15px;
+} 

@@ -3,20 +3,25 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<title> </title>
+<title> avya123</title>
 <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <header class="heading"> 
 <div class="name"> <i> <strong> Avya Chaurasiya </strong> </i> </div>
- <nav class="navbar">
+
+
+
+
+
+ <nav id="navMenu" class="navbar navmenu1"> 
 <a href="#">Home</a>
 <a href="#">About</a>
 <a href="#">Skill</a>
 <a href="#">Projects</a>
 <a href="#">Contact</a>
 </nav> 
-<div class="helloworld">menu</div>
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
 
 </header>
 
@@ -108,24 +113,24 @@ tions, including MS Word, Excel, and Notepad. Currently, I’m focused on develo
 
 
 
-<section class="section3">
+<section class="form-section">
 
 <div class="name2"><h1> Get in Touch</h1></div>
 <p> Feel free to drop a message for collaboration or any queries</p>
-<div class="allsub2">
+<div class="form-div">
 
 <form>
-<div class="sub2">
+<div class="form">
 <input  type="text" class="formname"
 placeholder="Enter your name" required> </div>
 </div>
 
-<div class="sub2">
+<div class="form">
 <input  type="text" class="formemail"
 placeholder="Enter your Email" required> </div>
 </div>
 
-<div class="sub2">
+<div class="form">
 <input  type="text" class="message"
 placeholder="Enter your message" required> </div>
 
@@ -167,6 +172,13 @@ to building clean , reponsive, and accessible websites. </p>
 </div>
 <div class="last-footer"> <p> © 2025 Avya Chaurasiya All Rights reserved. <a href="https://srgeducation.in/">srgeducation</a></p></div>
 </footer>
+
+<script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("navbar");
+        }
+ </script>
+
 
 
 </body>

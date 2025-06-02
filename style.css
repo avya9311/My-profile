@@ -30,16 +30,44 @@ font-size:30px;
 a:hover{
 color:pink;
 }
+.navmenu1{
+	display:flex;
+	flex-direction:row;
+	gap:10px;
+}
 @media screen and ( max-width:768px){
 .navbar{
 	display:none;
+	color:white;
+	font-size:20px;
 }
+.navmenu1{
+	flex-direction:column;
+	position:absolute;
+	top:50px;
+	right:2px;
+	background-color:#82B2C0;	
+	padding:20px;
+
 }
+.menu-icon{
+	color:white;
+	font-size:20px;
+} 
+
+}
+
 @media screen and (min-width:769px){
+.menu-icon{
+	display:none;
+}
 .helloworld{
 display:none;	
 }
-	
+.helloworld{
+	color:#2D3864;
+	font-size:19px;
+}
 }
 .about-section {
  
@@ -56,7 +84,6 @@ border-radius:20px;
 box-shadow:10px 10px 10px lightblue;
 display:flex;
 justify-content:center;
-
 align-items:center;
 width:700px;
 
@@ -78,11 +105,12 @@ margin-left:30px;
 }
 
 .about-name{
-font-size:26px;
+font-size:22px;
 }
 .profile-name{
 color:gray;
-margin-top:5px;
+margin:
+
 }
 
 
@@ -116,6 +144,8 @@ font-size:32px;
 .project-container{
 	display:flex;
 	justify-content:space-evenly;
+     flex-wrap:wrap;
+	 
 }
 .my-project{
 background-color:#E7F1F9;
@@ -190,31 +220,25 @@ border:3px solid white;
 .skill-show{
 	margin-top:30px;
 }
-.formname{
-width:500px;
+input{
+width:350px;
 height:10px;
 margin-top:10px;
 padding:10px;
 border-radius:20px;
 }
-.formemail{
-width:500px;
-height:15px;
-margin-top:10px;
-padding:10px;
-border-radius:20px;
-}
+
 .message{
-width:500px;
 height:100px;
 margin-top:10px;
 padding:10px;
 border-radius:20px;
 }
-.section3{
+.form-section{
 text-align:center;
 background-color:#82B2C0;
 padding:40px;
+
 
 }
 .name2{
@@ -304,5 +328,32 @@ font-size:18px;
 border-bottom:1px solid #82B2C0;
 padding:20px;
 background-color:#E7F1F9; 
-
+}
+@media screen  and (max-width:480px){
+	input{
+		max-width:100%;
+	}
+	.about{
+padding:15px;
+width:100%;
+}
+.follow{
+padding:15px;
+width:100%;
+}
+.quick{
+padding:15px;
+width:100%;
+}
+	
+	.about-container{
+		margin:20px;
+		display:flex;
+		flex-direction:column;
+	}
+	
+	.about {
+		width:100%;
+		text-align:left;
+	}
 }

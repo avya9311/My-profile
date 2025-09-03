@@ -1,0 +1,152 @@
+ <!DOCTYPE html>
+<html>
+<head><title>Weather-App</title>
+<style>
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+background-image:linear-gradient(to top, #a18cd1 0%,#fbc2eb 100%);
+background-size:cover;
+background-repeat:no-repeat;
+background-attachment: fixed;
+margin:0;
+
+}
+
+
+
+#box{
+display: flex;
+background-color: whitesmoke;
+width: 400px;
+height: 200px;
+gap: 10px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+margin-top: 200px;
+border:2px solid lightblue;
+box-shadow:  1.5px 3px 1.5px #fc80a6 ;
+}
+input{
+
+width: 300px;
+border-radius: 7px;
+padding: 5px;
+
+}
+button{
+width: 100px;
+padding: 5px;
+border-radius: 10px;
+ background-color:lightblue ;
+}
+h1{
+
+color:  #6a82fb;
+}
+</style>
+</head>
+<body>
+<div id="all">
+<div id="box">
+<h1>⛅ Open Weather App</h1>
+    <input type="text" placeholder="Enter city name" id="input">
+    <button id="btn"> Get Weather</button>
+</div>
+   <div id="ans">
+                 <div id="heading"></div>
+                 <div id="ans1">
+                 <div id="a11" class="del" ></div>
+                 <div id="b22" class="del" ></div>
+                 <div id="c33" class="del" ></div>
+                 <div id="d44" class="del" ></div>
+                 <div id="e55" class="del" ></div>
+                 <div id="f66" class="del" ></div>
+                 <div id="h77" class="del" ></div>
+                 <div id="i88" class="del" ></div>
+                  <div id="j99" class="del" ></div>
+
+         </div>        </div>
+</div>
+
+
+</div>
+<script>
+
+const ans = document.querySelector('#ans')
+ const ans1 = document.querySelector('#ans1');
+    const a11 = document.querySelector('#a11');
+    const b22 = document.querySelector('#b22');
+    const c33 = document.querySelector('#c33');
+    const d44 = document.querySelector('#d44');
+    const e55 = document.querySelector('#e55');
+    const f66 = document.querySelector('#f66');
+    const h77 = document.querySelector('#h77');
+    const i88 = document.querySelector('#i88');
+     const j99 = document.querySelector('#j99');
+const btn = document.querySelector('#btn')
+let input =document.querySelector('#input')
+
+
+function weather(){
+let city = (input.value);
+console.log(city);
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=e49dc9430574131bd058dfe4763773f8`)
+.then((data)=>{ return data.json()})
+.then((info)=>{
+       a11.innerText ="city📍 : " + info.name;
+
+     b22.innerText ="🌡Temperature : " + info.main.temp;
+      c33.innerText = "🌨Feels-Like : "+ info.main.feels_like;
+       d44.innerText ="🥶Min-Temperature : "+ info.main.temp_min;
+        e55.innerText = "🥵max-Temperature : "+ info.main.temp_max;
+         f66.innerText = "📈pressure : "   + info.main.pressure;
+          h77.innerText = "📉humidity : "   + info.main.humidity;
+      i88.innerText = "👀 visibility: "   + info.visibility;  
+     j99.innerText = "☁cloud : "   + info.clouds.all; 
+
+
+});
+ 
+
+   
+    ans.style.backgroundColor = "white";
+   ans.style.border = "2px solid lightblue";
+   ans.style.marginTop = "20px";
+   ans.style.textAlign = "center";
+   ans.style.color =  "#6a82fb";
+   ans.style.padding = "10px";
+   ans.style.borderRadius = "10px";
+
+
+    ans1.style.backgroundColor = "#EBE8E2" ;
+    ans1.style.width = "92%";
+    ans1.style.border = "0.5px solid #EBE8E2";
+    ans1.style.marginTop = "20px";
+    ans1.style.textAlign = "center";
+    ans1.style.color =  "black";
+    ans1.style.padding = "10px";
+    ans1.style.borderRadius = "10px";
+    ans1.style.boxShadow = "4px 4px 4px #EBE8E2";
+
+    }
+
+   
+   btn.addEventListener("click",weather)
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
